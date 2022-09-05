@@ -21,10 +21,14 @@
     "@storybook/manager-webpack4": "^6.5.10",
     "@storybook/react": "^6.5.10",
     "@storybook/testing-library": "^0.0.13",
-    "babel-loader": "^8.2.5"
+    "babel-loader": "^8.2.5",
+    "chromatic": "^6.9.0"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
-  }
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=85b6db193be3"
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "component-driven-avatar@1.0.0"
 }

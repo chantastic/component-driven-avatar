@@ -55,3 +55,52 @@ For me that's GitHub.
 It just saves a few steps as you'll need to connect your git provider anyway.
 
 ### 2. Push project to GitHub
+
+### 3. Add project in Chromatic
+
+### 4. Publish Storybook to Chromatic (locally)
+
+Add `chromatic` as dev dependency:
+
+`yarn add --dev chromatic`
+
+Publish to chromatic using global `chromatic` script and provided project token:
+`npx chromatic --project-token=85b6db193be3`
+
+This script will build storybook, using the default `yarn build-storybook command` (configurable via CLI, for existing projects).
+
+Once the `chromatic` successfully builds and uploads to Chromatic (using your project-token), the page will automatically refresh with details about your first Chromatic build.
+
+Decide how to send builds to Chromatic.
+
+The command line tool will ask if you want to add a `chromatic` script to `package.json` scripts for future use.
+Go with this for now and we can make it more secure before committing it (as the warning suggests).
+
+```
+Your project token was added to the script via the --project-token flag.
+If you're running Chromatic via continuous integration, we recommend setting
+the CHROMATIC_PROJECT_TOKEN environment variable in your CI environment.
+You can then remove the --project-token from your package.json script.
+```
+
+Catch UI changes, by sending a second build.
+
+Chromatic will require that you send a second build for comparison. This doesn't have to be committed into code. You can make a local changes here and send it as a build using the global chromatic script.
+
+To get thru this quickly, change the text on one of these buttons to get a diff.
+
+```js
+export const Small = Template.bind({});
+Small.args = {
+  size: 'small',
+  label: 'Small',
+};
+```
+
+Run `yarn chromatic` (the new script that was added after initial run)
+
+See that Chromatic spotted your changes.
+
+## Explore the UI with Nick
+
+[Open space to explore the partso of the Chromatic UI]
