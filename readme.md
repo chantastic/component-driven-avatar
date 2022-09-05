@@ -123,3 +123,22 @@ In this case, we made arbitrary changes. So we're going to reject them.
 Let's change our `Small` component back.
 
 Publish a new build that matches the initial to see a build with another green bubble.
+
+## Possible next steps
+- [Automate Chromatic with GitHub Actions](https://www.chromatic.com/docs/github-actions)
+  - This will let us see changes in GitHub
+  - [PRs page](https://www.chromatic.com/pullrequests?appId=63160b911cb40b4b2177896e)
+- Add basic Avatar
+  - This results in a new story but no changes
+- Delete `/stories` directory
+  - This will result in a number of changes
+- Interpret component interfaces with [Storybook docs](https://storybook.js.org/addons/@storybook/addon-docs) and (in our case) `prop-types`
+- interaction-testing with [Play functions](https://storybook.js.org/docs/react/writing-stories/play-function)
+- Storybook features
+  - Viewport, Measure, Outline
+  - addon-accessibility   
+- Chromatic features
+  - Embed (works well in Notion)
+  - Enable various browsers (https://www.chromatic.com/docs/browsers) — not available in free plan
+  - Add [Slack intergration](https://www.chromatic.com/docs/integrations) or [WebHooks](https://www.chromatic.com/docs/integrations)
+  - [UI Review](https://www.chromatic.com/pullrequests?appId=63160b911cb40b4b2177896e) and how it difers from UI Test
