@@ -18,3 +18,16 @@ The CLI will ask you which `view-layer` and `builder` you'd like to use.
 
 *For this example, select `React` and `webpack`*
 
+## Understand Storybook Scripts
+
+Open `package.json` or run `yarn run` to see the available Storybook scripts
+
+### `yarn storybook`
+
+This script runs the Storybook server at `localhost:6006`.
+It's used for regular development and will — in most cases — update with code changes.
+### `yarn build-storybook`
+
+This script compiles Storybook into static assets for online hosting.
+
+A compiled Storybook can be hosted anywhere (Netlify, Vercel, AWS, etc.). But Chromatic comes with a few nice features. The most noteable upgrade of using Chromatic's free hosting is the ability to Embed stories.
