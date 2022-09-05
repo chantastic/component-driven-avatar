@@ -104,3 +104,22 @@ See that Chromatic spotted your changes.
 ## Explore the UI with Nick
 
 [Open space to explore the partso of the Chromatic UI]
+
+## Understand builds
+
+One of the hardest parts for me to understand about CI is that *builds are not branches*.
+
+This is confusing to a lot of folks getting started with CI.
+So Chromatic has a doc explaining exactly how baselines and diffs are determined.
+
+https://www.chromatic.com/docs/branching-and-baselines
+
+What we need to understand now is that `Build 1` is our is our baseline. Every build will compare to that.
+
+What we're doing in Chromatic is determining if the artifact of that build should update the baseline.
+
+In this case, we made arbitrary changes. So we're going to reject them.
+
+Let's change our `Small` component back.
+
+Publish a new build that matches the initial to see a build with another green bubble.
